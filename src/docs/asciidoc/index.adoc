@@ -1,0 +1,56 @@
+ifndef::snippets[]
+:snippets: ../../../build/generated-snippets
+endif::[]
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+:site-url: /build/asciidoc/html5/
+
+= 타이틀 APIs
+
+****
+WARNING: 경고입니다.
+****
+
+[[introduction]]
+== 소개
+
+소개입니다.
+
+
+[[introduction]]
+== 서비스 환경
+
+|===
+| 환경 | URI
+
+| 개발
+| http://127.0.0.1
+
+| 운영
+| http://localhost
+|===
+
+ifndef::snippet[]
+:snippet: ../../../build/generated-snippets
+endif::[]
+
+== 사용자
+
+=== 사용자 비밀번호 변경
+
+**Request**
+include::{snippet}/accounts/v1/me/change-password/http-request.adoc[]
+
+**Request Header**
+include::{snippet}/accounts/v1/me/change-password/request-headers.adoc[]
+
+**Request Body**
+include::{snippet}/accounts/v1/me/change-password/request-body.adoc[]
+
+**Response**
+include::{snippet}/accounts/v1/me/change-password/http-response.adoc[]
+

@@ -7,7 +7,6 @@ buildscript {
     ext.lombokVersion = "1.18.20"
     ext.restDocsVersion = "2.0.5.RELEASE"
     ext.jacksonVersion = "2.11.4"
-    ext.h2Version = "1.4.200"
 
     repositories {
         maven {
@@ -81,20 +80,9 @@ dependencies {
     asciidoctor "org.springframework.restdocs:spring-restdocs-asciidoctor:${restDocsVersion}"
     testImplementation "org.springframework.restdocs:spring-restdocs-mockmvc:${restDocsVersion}"
 
-    implementation "com.fasterxml.jackson.datatype:jackson-datatype-hibernate5:${jacksonVersion}"
-
-    implementation "org.springframework.boot:spring-boot-starter-data-jpa"
-
-    compileOnly "org.springframework.boot:spring-boot-configuration-processor"
-    implementation "org.springframework.boot:spring-boot-starter-validation"
-
     implementation "org.springframework.boot:spring-boot-starter-undertow"
     implementation "org.springframework.boot:spring-boot-starter-web"
-    // or implementation "org.springframework.boot:spring-boot-starter"
     testImplementation "org.springframework.boot:spring-boot-starter-test"
-
-    testImplementation "com.h2database:h2:${h2Version}"
-    compileOnly "com.h2database:h2:${h2Version}"
 }
 
 // <------- RestDocs & Asciidoctor
