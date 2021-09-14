@@ -1,4 +1,7 @@
-# Spring Framework Template for Gradle
+# Spring RestDocs 작성 가이드 #2 응용편 - 보일러플레이트 코드 제거 가이드
+
+참고: https://syaku.tistory.com/383
+
 
 ## Installing Gradle 6.5
 
