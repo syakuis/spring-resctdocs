@@ -1,10 +1,10 @@
-package io.github.syakuis.restdocs.configuration;
+package io.github.syakuis.restdocs.constraints;
 
 /**
  * @author Seok Kyun. Choi.
  * @since 2021-08-25
  */
-public interface FieldSpec {
+public interface Descriptor {
     String name();
     String getDescription();
     boolean isOptional();

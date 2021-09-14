@@ -4,8 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.autoconfigure.restdocs.RestDocsMockMvcConfigurationCustomizer;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
-
-import static org.springframework.restdocs.operation.preprocess.Preprocessors.prettyPrint;
+import org.springframework.restdocs.operation.preprocess.Preprocessors;
 
 /**
  * @author Seok Kyun. Choi.
@@ -22,7 +21,7 @@ public class RestDocsTestConfiguration {
             .uris().withPort(port).withHost("localhost").withScheme("http")
             .and()
             .operationPreprocessors()
-            .withRequestDefaults(prettyPrint())
-            .withResponseDefaults(prettyPrint());
+            .withRequestDefaults(Preprocessors.prettyPrint())
+            .withResponseDefaults(Preprocessors.prettyPrint());
     }
 }

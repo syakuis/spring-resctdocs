@@ -1,4 +1,4 @@
-package io.github.syakuis.restdocs.application.model;
+package io.github.syakuis.application.model;
 
 import lombok.*;
 

@@ -1,9 +1,10 @@
-package io.github.syakuis.restdocs.application;
+package io.github.syakuis.application;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.github.syakuis.restdocs.application.model.AccountRequestDto;
+import io.github.syakuis.application.model.AccountRequestDto;
 import io.github.syakuis.restdocs.configuration.AutoConfigureMvcRestDocs;
-import io.github.syakuis.restdocs.configuration.RestDocsFieldHandler;
+import io.github.syakuis.restdocs.constraints.DescriptorCollectors;
+import io.github.syakuis.restdocs.constraints.RestDocsDescriptor;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -37,7 +38,7 @@ class AuthenticatedAccountRestControllerTest {
     @Autowired
     private ObjectMapper mapper;
 
-    private final RestDocsFieldHandler changePasswordFieldHandler = new RestDocsFieldHandler(ChangePasswordField.values());
+    private final RestDocsDescriptor changePasswordFieldHandler = new RestDocsDescriptor(ChangePasswordField.values());
 
     private String pathPrefix;
     private String restdocsPath;
@@ -69,7 +70,8 @@ class AuthenticatedAccountRestControllerTest {
                 ),
 
                 requestFields(
-                    changePasswordFieldHandler.payload(ChangePasswordField.currentPassword.name(), ChangePasswordField.newPassword.name(), ChangePasswordField.newPasswordConfirm.name()).collect()
+                    changePasswordFieldHandler.of(ChangePasswordField.currentPassword, ChangePasswordField.newPassword, ChangePasswordField.newPasswordConfirm)
+                        .collect(DescriptorCollectors::fieldDescriptor)
                 )
             ));
     }

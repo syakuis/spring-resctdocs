@@ -1,6 +1,6 @@
-package io.github.syakuis.restdocs.application;
+package io.github.syakuis.application;
 
-import io.github.syakuis.restdocs.application.model.AccountRequestDto;
+import io.github.syakuis.application.model.AccountRequestDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;

@@ -78,10 +78,12 @@ dependencies {
     testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 
     asciidoctor "org.springframework.restdocs:spring-restdocs-asciidoctor:${restDocsVersion}"
+    implementation "org.springframework.restdocs:spring-restdocs-mockmvc:${restDocsVersion}"
     testImplementation "org.springframework.restdocs:spring-restdocs-mockmvc:${restDocsVersion}"
 
     implementation "org.springframework.boot:spring-boot-starter-undertow"
     implementation "org.springframework.boot:spring-boot-starter-web"
+    implementation "org.springframework.boot:spring-boot-starter-test"
     testImplementation "org.springframework.boot:spring-boot-starter-test"
 }
 
